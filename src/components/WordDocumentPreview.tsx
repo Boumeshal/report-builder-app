@@ -1,11 +1,14 @@
 import React from "react";
+import { Report } from "../types/reporting";
 
 type WordDocumentPreviewProps = {
-  title: string;
-  content: string;
+  report: Report;
 };
 
-const WordDocumentPreview: React.FC<WordDocumentPreviewProps> = ({ title, content }) => {
+const WordDocumentPreview: React.FC<WordDocumentPreviewProps> = ({ report }) => {
+  const title = report.name;
+  const content = report.description || "Pas de description.";
+
   return (
     <div className="mt-8 p-4 border border-gray-300 rounded bg-white shadow">
       <h2 className="text-xl font-bold mb-2">Document Preview</h2>
