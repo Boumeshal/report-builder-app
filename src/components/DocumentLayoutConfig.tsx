@@ -10,7 +10,7 @@ import {
   Save
 } from 'lucide-react';
 import { Report } from '../types/reporting';
-import WordDocumentPreview from './WordDocumentPreview';
+import WordDocumentPreview from './WordDocumentPreview'; // ✅ Corrigé
 
 interface DocumentLayoutConfigProps {
   report: Report;
